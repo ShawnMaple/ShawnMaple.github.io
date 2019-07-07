@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>我的第一篇文章 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="算法描述总体思想：将数组元素分为已排好的有序区间和待排区间，起初已排区间只有一个元素即数组的第一个元素，然后在待排区间内依次取出元素并按照已排区间从后向前的顺序依次进行比较并插入到合适位置，使得插入后仍保持已排区间的有序性，直到所有待排区间为空，算法结束。（过程类似于摸扑克牌，手牌为已排元素，待抓的底牌为待排元素，依次抓取排序底牌并插入手牌中，直到待抓底牌为空）说明： 插入排序属于稳定的排序方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/07/07/hello-world/index.html">
+<meta property="og:title" content="我的第一篇文章">
+<meta property="og:url" content="http://yoursite.com/2019/07/05/排序算法--插入排序法 实现及详解（C++版）/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="算法描述总体思想：将数组元素分为已排好的有序区间和待排区间，起初已排区间只有一个元素即数组的第一个元素，然后在待排区间内依次取出元素并按照已排区间从后向前的顺序依次进行比较并插入到合适位置，使得插入后仍保持已排区间的有序性，直到所有待排区间为空，算法结束。（过程类似于摸扑克牌，手牌为已排元素，待抓的底牌为待排元素，依次抓取排序底牌并插入手牌中，直到待抓底牌为空）说明： 插入排序属于稳定的排序方法">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-06T16:56:42.628Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190705160647672.gif">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190705154143256.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTkyNjcwOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-07-07T04:02:56.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="我的第一篇文章">
+<meta name="twitter:description" content="算法描述总体思想：将数组元素分为已排好的有序区间和待排区间，起初已排区间只有一个元素即数组的第一个元素，然后在待排区间内依次取出元素并按照已排区间从后向前的顺序依次进行比较并插入到合适位置，使得插入后仍保持已排区间的有序性，直到所有待排区间为空，算法结束。（过程类似于摸扑克牌，手牌为已排元素，待抓的底牌为待排元素，依次抓取排序底牌并插入手牌中，直到待抓底牌为空）说明： 插入排序属于稳定的排序方法">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190705160647672.gif">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,39 +157,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-排序算法--插入排序法 实现及详解（C++版）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      我的第一篇文章
     </h1>
   
 
         
-        <a href="/2019/07/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-06T16:56:42.628Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
+        <a href="/2019/07/05/排序算法--插入排序法 实现及详解（C++版）/" class="archive-article-date">
+  	<time datetime="2019-07-04T17:20:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>总体思想：将数组元素分为已排好的有序区间和待排区间，起初已排区间只有一个元素即数组的第一个元素，然后在待排区间内依次取出元素并按照已排区间从后向前的顺序依次进行比较并插入到合适位置，使得插入后仍保持已排区间的有序性，直到所有待排区间为空，算法结束。（过程类似于摸扑克牌，手牌为已排元素，待抓的底牌为待排元素，依次抓取排序底牌并插入手牌中，直到待抓底牌为空）<br><strong>说明：</strong> 插入排序属于<strong>稳定的</strong>排序方法</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h2><ol>
+<li>首先数组第一个元素认为已排好序。</li>
+<li>取出下一个元素，并与已排好序区间中的元素<strong>从后向前比较</strong></li>
+<li>直到找到比该元素<strong>小或者相等（包含等于的情况，保证算法的稳定性）</strong>的那个元素</li>
+<li>将该元素插入到那个元素的后面</li>
+<li>重复步骤2~4，直到所有的待排区间为空<br> <img src="https://img-blog.csdnimg.cn/20190705160647672.gif" alt="在这里插入图片描述"><h2 id="算法实现（C-版）"><a href="#算法实现（C-版）" class="headerlink" title="算法实现（C++版）"></a>算法实现（C++版）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入排序算法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Isert_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; vec)</span> </span>&#123;		</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; vec.size(); ++i) &#123;	<span class="comment">//从第二个元素开始扫描，第一个元素默认已排好</span></span><br><span class="line">		<span class="keyword">int</span> temp = vec[i];					<span class="comment">//将待排序元素取出存入临时变量</span></span><br><span class="line">		<span class="keyword">int</span> j = i - <span class="number">1</span>;						<span class="comment">//指向已排区间的最后一个元素</span></span><br><span class="line">		<span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; vec[j] &gt; temp) &#123;	<span class="comment">//找到比待插入元素小或者等于的那个元素位置，相等的情况也跳出（只有大于的情况才进行移动），保证了算法的稳定性</span></span><br><span class="line">			vec[j + <span class="number">1</span>] = vec[j];			<span class="comment">//将比待排元素大的元素依次向后移位</span></span><br><span class="line">			--j;</span><br><span class="line">		&#125;</span><br><span class="line">		vec[j + <span class="number">1</span>] = temp;					<span class="comment">//将待插入元素插入到比它小或者等于的那个元素位置的后面</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Print</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; vec.size(); ++i) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; vec[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec = &#123; <span class="number">6</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">9</span>&#125;;</span><br><span class="line">	Print(vec);</span><br><span class="line">	Isert_sort(vec);</span><br><span class="line">	Print(vec);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</li>
+</ol>
+<p><strong>运行结果：</strong><br><img src="https://img-blog.csdnimg.cn/20190705154143256.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTkyNjcwOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><p><strong>最坏复杂度O(n²)</strong>：当初始数组完全逆序的时候，为最坏情况，需要比较并移动的总次数为：1+2+3+…+(n-1)=n(n-1)/2<br><strong>最好复杂度(n)</strong>：当初始数组完全顺序的时候，为最好情况，需比较的次数为n-1;<br><strong>平均复杂度O(n²)</strong>：每次需比价移动次数为已排序区间的一半n(n-1)/4</p>
 
       
 
@@ -271,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/07/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/05/排序算法--插入排序法 实现及详解（C++版）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,11 +289,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2019/07/05/排序算法--插入排序法 实现及详解（C++版）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇文章</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2019/07/07/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -314,7 +322,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法描述"><span class="toc-number">1.</span> <span class="toc-text">算法描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法步骤"><span class="toc-number">2.</span> <span class="toc-text">算法步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法实现（C-版）"><span class="toc-number">3.</span> <span class="toc-text">算法实现（C++版）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复杂度分析"><span class="toc-number">4.</span> <span class="toc-text">复杂度分析</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -339,7 +347,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/07/07/hello-world/",
+  id: "http://yoursite.com/2019/07/05/排序算法--插入排序法 实现及详解（C++版）/",
   owner: 'shawnmaple',
   repo: 'shawnmaple.github.io',
   oauth: {
