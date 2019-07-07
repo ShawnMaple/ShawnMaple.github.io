@@ -390,6 +390,30 @@
 
 
 
+  <!-- Gitalk 评论 start  -->
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+         // gitalk的主要参数【引用_config.yml中特定的变量】
+        clientID: '81ebcfb53114ce8626a3',
+        clientSecret: 'ed9ba76a3ce7bb309556167b9c33ca92bd58a91a',
+        repo: 'shawnmaple.github.io',
+        owner: 'shawnmaple#你的 GitHub ID',
+        admin: ['shawnmaple#你的 GitHub ID'],
+        id: "http://yoursite.com/2019/02/12/解决方案：VS2017-无法打开源文件-stdio-h-main-h-等头文件/" // 这是仓库的id，这里使用的是文章的url作为id，也可以是path
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end -->
+  
+
+
+
+
 
   
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
