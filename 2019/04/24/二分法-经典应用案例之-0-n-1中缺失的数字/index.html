@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/7 | Hexo</title>
+  <title>二分法 经典应用案例之 0~n-1中缺失的数字 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Shawn的Hexo博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/07/index.html">
+  <meta name="description" content="题目描述一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0到n-1之内。在范围0到n-1的n个数字中有且只有一个数字不在该数组中，请找出这个数字。（题目来源：《剑指offer》53题）">
+<meta name="keywords" content="二分法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二分法 经典应用案例之 0~n-1中缺失的数字">
+<meta property="og:url" content="http://yoursite.com/2019/04/24/二分法-经典应用案例之-0-n-1中缺失的数字/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Shawn的Hexo博客">
+<meta property="og:description" content="题目描述一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0到n-1之内。在范围0到n-1的n个数字中有且只有一个数字不在该数组中，请找出这个数字。（题目来源：《剑指offer》53题）">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-07T05:27:45.026Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Shawn的Hexo博客">
+<meta name="twitter:title" content="二分法 经典应用案例之 0~n-1中缺失的数字">
+<meta name="twitter:description" content="题目描述一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0到n-1之内。在范围0到n-1的n个数字中有且只有一个数字不在该数组中，请找出这个数字。（题目来源：《剑指offer》53题）">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -153,60 +155,217 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-二分法-经典应用案例之-0-n-1中缺失的数字" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/05/排序算法--插入排序法 实现及详解（C++版）/" class="archive-article-date">
-  	<time datetime="2019-07-05T08:12:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/05/排序算法--插入排序法 实现及详解（C++版）/">排序算法--插入排序法 实现及详解（C++版）</a>
+    <h1 class="article-title" itemprop="name">
+      二分法 经典应用案例之 0~n-1中缺失的数字
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/04/24/二分法-经典应用案例之-0-n-1中缺失的数字/" class="archive-article-date">
+  	<time datetime="2019-04-24T05:21:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0到n-1之内。在范围0到n-1的n个数字中有且只有一个数字不在该数组中，请找出这个数字。（题目来源：《剑指offer》53题）<a id="more"></a></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p><strong>解法1</strong>   时间复杂度O(n)：<br>首先可以对0 ~ （n~1）这n个数求和S1，然后对数组中的所有数求和S2，二者的差值S1-S2即为不在数组中的这个数！<br>缺点：没用利用好数组是递增排序的规律，复杂度为O(n)，这里不再赘述。</p>
+<p><strong>解法2</strong> 时间复杂度O(log n):<br>假设数字m不在数组中，由于数组是排序的，所以m之前的数字在数组中的值与其下标应相等，m之后的值其值比下标都要大1，因此，我们要找的不在数组中的元素m就是数组中的第一个数值与下标不等的下标！由于数组是递增排序的，因此利用二分法！</p>
+<h2 id="二分法代码"><a href="#二分法代码" class="headerlink" title="二分法代码"></a>二分法代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMissingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (nums.size() &lt;= <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> r = nums.size() - <span class="number">1</span>;</span><br><span class="line"><span class="comment">/***************经典二分代码***************/</span></span><br><span class="line">		<span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">			<span class="keyword">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (nums[mid] != mid) 	<span class="comment">//每次使用时只需注意if条件语句满足什么条件时收缩右边界即可</span></span><br><span class="line">				r = mid;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				l = mid + <span class="number">1</span>;</span><br><span class="line">		&#125;						<span class="comment">//无论找到找不到最后都收缩于l=r的情况</span></span><br><span class="line"><span class="comment">/***************经典二分代码***************/</span></span><br><span class="line">		<span class="keyword">if</span> (nums[l] == l)		<span class="comment">//最后判断一下是否找到了想要的结果：如果没找到，说明收缩在数组的最右侧边界处，此时结果应为下标+1********注意边界情况</span></span><br><span class="line">			<span class="keyword">return</span> l + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span>					<span class="comment">//如果找到了直接返回下标1即可</span></span><br><span class="line">			<span class="keyword">return</span> l;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="经典二分模板："><a href="#经典二分模板：" class="headerlink" title="经典二分模板："></a>经典二分模板：</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">			<span class="keyword">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (<span class="comment">/*此处填写满足收缩右边情况的判断语句*/</span>) 	</span><br><span class="line">				r = mid;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				l = mid + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>==说明：==</strong><br>跳出循环的条件永远为l=r,但此时分为两种情况：<br>情况一：没有找到想要的结果，根据具体问题另做处理（此时为边界情况或特殊输入情况）<br>情况二：找到了想要的结果，此时即为l(或arr[l]等)</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的鼓励!<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/shoukuanma.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">排序算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二分法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/24/二分法-经典应用案例之-0-n-1中缺失的数字/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/04/24/二叉树的前序、中序、后序遍历-小结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          二叉树的前序、中序、后序遍历 小结
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/04/23/二分法模板及应用-小结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二分法模板及应用 小结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二分法代码"><span class="toc-number">2.1.</span> <span class="toc-text">二分法代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#经典二分模板："><span class="toc-number">3.</span> <span class="toc-text">经典二分模板：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2019/04/24/二分法-经典应用案例之-0-n-1中缺失的数字/",
+  owner: 'shawnmaple',
+  repo: 'https://github.com/shawnmaple/shawnmaple.github.io.git',
+  oauth: {
+    client_id: '81ebcfb53114ce8626a3',
+    client_secret: 'ed9ba76a3ce7bb309556167b9c33ca92bd58a91a',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -229,8 +388,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
